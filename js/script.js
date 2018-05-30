@@ -2,8 +2,9 @@ $(document).ready(function() {
 	const $swiper = $('#swiper');
 	const $slides = $swiper.find('.swiper__slides');
 	const $slideList = $swiper.find('.swiper__slide');
-  	
-		
+	
+	// Zmiana slajdów
+
 	/*function changeSlide() {
 		$swiper.animate({'marginLeft':$('img').width()}, 500, moveFirstSlide);
 	}
