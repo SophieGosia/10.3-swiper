@@ -19,7 +19,7 @@ body { font-family: 'Roboto', sans-serif; font-size: 20px; text-align: center; }
 
 .swiper__slide--polaroid-img { background-color: #d854ac; background-image: url("https://images.unsplash.com/photo-1504084929552-a0b2dc8acfdb?ixlib=rb-0.3.5&s=6258e0a5ecea6d78bfde100cf84598a7&auto=format&fit=crop&w=1050&q=80"); }
 
-.swiper__nav { width: 100%; display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; margin-top: 10px; font-size: 40px; color: #000; cursor: pointer; }
+.swiper__nav { width: 100%; display: -ms-flexbox; display: flex; position: absolute; top: 200px; -ms-flex-pack: justify; justify-content: space-between; margin-top: 10px; font-size: 40px; color: #000; cursor: pointer; }
 
 .swiper__nav:hover { color: #d81d7b; }
 

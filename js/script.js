@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	const $swiper = $('#swiper');
-	const $slides = $swiper.find('.swiper__slides');
-	const $slideList = $swiper.find('.swiper__slide');
+	var $swiper = $('#swiper');
+	var $slides = $swiper.find('.swiper__slides');
+	var $slideList = $swiper.find('.swiper__slide');
 	
 	// Zmiana slajdów
 
@@ -19,10 +19,10 @@ $(document).ready(function() {
 	} */
 	
 	// Pobieram wielkość swipera
-	const swiperWidth = $swiper.outerWidth();
+	var swiperWidth = $swiper.outerWidth();
 	// Zmienna obecnej pozycji i ilośc slajdów
-	const slidesCounter = $slideList.length;
-	let currentSwipe = 0;
+	var slidesCounter = $slideList.length;
+	var currentSwipe = 0;
   
 	// Ustawiam wszystkim pojedynczym wielkość jak swipera
 	$slideList.each(function() {
@@ -30,7 +30,7 @@ $(document).ready(function() {
 	});
   
 	// Tworze kulki
-	for (let i = 0; i < slidesCounter; i++) {
+	for (var i = 0; i < slidesCounter; i++) {
 	  $('<div />', {
 		class: 'swiper__bullet'
 	  }).bind('click', function() {
@@ -63,7 +63,7 @@ $(document).ready(function() {
 	}
   
 	function translate(currentSwipe) {
-	  const offset = currentSwipe * swiperWidth;
+	  var offset = currentSwipe * swiperWidth;
 	  console.log('Translate to slide', currentSwipe);
 	  $slides.css({
 		transform: `translate3d(-${offset}px, 0, 0)`
