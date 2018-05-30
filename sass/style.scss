@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 * {
   box-sizing: border-box;
 }
@@ -25,49 +24,51 @@ body {
   position: relative;
   height: 50vh;
   border: 2px solid rgb(0, 0, 0);
-
   &__slides {
     display: flex;
     transition-duration: 0.3s;
   }
-
   &__slide {
     flex-shrink: 0;
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
   }
-
   &__slide--car-img {
     background-color: rgb(216, 111, 84);
     background-image: url("https://images.unsplash.com/photo-1496889050590-4db81f7fb62a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c14bd68dfadb77a8fbe59ade674e835&auto=format&fit=crop&w=1050&q=80");
   }
-
   &__slide--girl-img {
     background-color: rgb(216, 192, 84);
     background-image: url("https://images.unsplash.com/photo-1496450080853-5f78c43af9e9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f54e10ce09c4da2615d286adf51dcbe3&auto=format&fit=crop&w=1050&q=80");
   }
-
-  &__slide--polaroid-img{
+  &__slide--polaroid-img {
     background-color: rgb(216, 84, 172);
     background-image: url("https://images.unsplash.com/photo-1504084929552-a0b2dc8acfdb?ixlib=rb-0.3.5&s=6258e0a5ecea6d78bfde100cf84598a7&auto=format&fit=crop&w=1050&q=80");
   }
-
   &__nav {
     width: 100%;
     display: flex;
     position: absolute;
-    top: 200px;
+    top: calc(50% - 20px);
     justify-content: space-between;
-    margin-top: 10px;
     font-size: 40px;
+    line-height: 40px;
     color: #000;
     cursor: pointer;
-    &:hover {
-      color: rgb(216, 29, 123)
+    &-prev {
+      margin-left: 10px;
+      &:hover {
+        color: rgb(216, 29, 123)
+      }
+    }
+    &-next {
+      margin-right: 10px;
+      &:hover {
+        color: rgb(216, 29, 123)
+      }
     }
   }
-
   &__bullet {
     border-radius: 50%;
     width: 20px;
@@ -77,5 +78,4 @@ body {
     display: inline-block;
     background-color: rgb(216, 29, 123);
   }
-
 }

@@ -1,28 +1,27 @@
 $(document).ready(function () {
-  var $swiper = $('#swiper');
-  var $slides = $swiper.find('.swiper__slides');
-  var $slideList = $swiper.find('.swiper__slide');
+  const $swiper = $('#swiper');
+  const $slides = $swiper.find('.swiper__slides');
+  const $slideList = $swiper.find('.swiper__slide');
 
   // Pobieram wielkość swipera
-  var swiperWidth = $swiper.outerWidth();
+  const swiperWidth = $swiper.outerWidth();
   // Zmienna obecnej pozycji i ilośc slajdów
-  var slidesCounter = $slideList.length;
-  var currentSwipe = 0;
+  const slidesCounter = $slideList.length;
+  let currentSwipe = 0;
 
-  // Zmiana slajdów
+  // Automatyczna zmiana slajdów
 
-  /*function changeSlide() {
-  	$swiper.animate({'marginLeft':$('img').width()}, 500, moveFirstSlide);
+  function autoMove() {
+    console.log('Move auto');
+    if (currentSwipe === slidesCounter - 1) {
+      console.log('Last slide');
+      currentSwipe = 0;
+    } else {
+      currentSwipe++;
+    }
+    translate(currentSwipe);
   }
-
-  setInterval(changeSlide, 3000);
-
-  function moveFirstSlide() {
-  	var $firstSlide = $swiper.find(".swiper__slide:first");
-  	var $lastSlide = $swiper.find(".swiper__slide:last");
-  	$lastSlide.after($firstSlide);
-  	$swiper.css({marginLeft:0});
-  } */
+  setInterval(autoMove, 3000);
 
   // Ustawiam wszystkim pojedynczym wielkość jak swipera
   $slideList.each(function () {
@@ -30,7 +29,7 @@ $(document).ready(function () {
   });
 
   // Tworze kulki
-  for (var i = 0; i < slidesCounter; i++) {
+  for (let i = 0; i < slidesCounter; i++) {
     $('<div />', {
       class: 'swiper__bullet'
     }).bind('click', function () {
@@ -62,9 +61,9 @@ $(document).ready(function () {
     translate(currentSwipe);
   }
 
-  function translate(currentSwipe) {
-    var offset = currentSwipe * swiperWidth;
-    console.log('Translate to slide', currentSwipe);
+  function translate(position) {
+    var offset = position * swiperWidth;
+    console.log('Translate to slide', position);
     $slides.css({
       transform: `translate3d(-${offset}px, 0, 0)`
     });

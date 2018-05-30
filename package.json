@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run test:html && npm run test:js",
     "test:html": "globstar nu-html-checker *.html",
-    "test:js": "globstar jshint js/*.js",
+    "test:js": "globstar eslint js/*.js",
     "init-project": "npm install && npm-run-all init:*",
     "init:dirs": "mkdirp sass css vendor images js",
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
@@ -30,7 +30,6 @@
     "browser-sync": "^2.23.6",
     "eslint": "^4.19.1",
     "globstar": "^1.0.0",
-    "jshint": "^2.9.5",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
     "nu-html-checker": "^0.1.0",
