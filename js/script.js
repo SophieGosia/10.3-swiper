@@ -2,6 +2,12 @@ $(document).ready(function() {
 	var $swiper = $('#swiper');
 	var $slides = $swiper.find('.swiper__slides');
 	var $slideList = $swiper.find('.swiper__slide');
+
+	// Pobieram wielkość swipera
+	var swiperWidth = $swiper.outerWidth();
+	// Zmienna obecnej pozycji i ilośc slajdów
+	var slidesCounter = $slideList.length;
+	var currentSwipe = 0;
 	
 	// Zmiana slajdów
 
@@ -17,13 +23,7 @@ $(document).ready(function() {
 		$lastSlide.after($firstSlide);
 		$swiper.css({marginLeft:0});
 	} */
-	
-	// Pobieram wielkość swipera
-	var swiperWidth = $swiper.outerWidth();
-	// Zmienna obecnej pozycji i ilośc slajdów
-	var slidesCounter = $slideList.length;
-	var currentSwipe = 0;
-  
+	  
 	// Ustawiam wszystkim pojedynczym wielkość jak swipera
 	$slideList.each(function() {
 	  $(this).width(swiperWidth);
@@ -69,9 +69,6 @@ $(document).ready(function() {
 		transform: `translate3d(-${offset}px, 0, 0)`
 	  });
 	}
-
-
-
 
 });
 
