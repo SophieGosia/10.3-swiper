@@ -1,5 +1,5 @@
-10.3 - jquery
-https://codepen.io/sophie_gosia/pen/oqJKPB
+10.3 - swiper
+https://codepen.io/sophie_gosia/pen/MXYEBq
 
 How to run this project: 
 
